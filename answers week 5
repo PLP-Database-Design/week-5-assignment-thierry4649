@@ -1,0 +1,30 @@
+-- Create Patients Table
+CREATE TABLE patients (
+    patient_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    date_of_birth DATE NOT NULL
+);
+
+-- Create Providers Table
+CREATE TABLE providers (
+    provider_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    provider_specialty VARCHAR(100) NOT NULL
+);
+-- Insert Sample Data into Patients
+INSERT INTO patients (first_name, last_name, date_of_birth) VALUES
+('Jobn', 'Doye', '1980-05-15'),
+('Jany', 'Sith', '1992-07-22'),
+('Ely', 'Jonson', '1985-12-30'),
+('Micael', 'Bron', '1978-02-17');
+
+-- Insert Sample Data into Providers
+INSERT INTO providers (first_name, last_name, provider_specialty) VALUES
+('Dr. Alice', 'Green', 'Cardiology'),
+('Dr. Bob', 'White', 'Pediatrics'),
+('Dr. Carol', 'Black', 'Dermatology'),
+('Dr. David', 'Blue', 'Orthopedics');
+SELECT * FROM patients;
+SELECT * FROM providers;
